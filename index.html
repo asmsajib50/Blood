@@ -1,270 +1,203 @@
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Blood Donate Club">
-            <h1>Blood Donate Club</h1>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="nav-menu">
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রক্তদাতা প্যানেল - জীবন বাঁচান</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="user-panel">
+        <!-- হেডার সেকশন -->
+        <header class="user-header">
+            <div class="logo-container">
+                <img src="images/blood-drop-logo.png" alt="রক্তদান লোগো">
+                <h1>রক্তদাতা ক্লাব</h1>
+            </div>
+            <div class="user-profile">
+                <img src="images/user-avatar.jpg" alt="প্রোফাইল ছবি" class="profile-pic">
+                <span class="user-name">আহমেদ রহমান</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </header>
+
+        <!-- সাইডবার নেভিগেশন -->
+        <nav class="sidebar">
             <ul>
-                <li><a href="index.html">হোম</a></li>
-                <li><a href="donate.html">রক্ত দিন</a></li>
-                <li><a href="need-blood.html">রক্ত প্রয়োজন</a></li>
-                <li><a href="donors.html">রক্তদাতা খুঁজুন</a></li>
-                <li><a href="contact.html">যোগাযোগ</a></li>
-                <li><a href="admin/login.html" class="admin-btn">এডমিন</a></li>
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>ড্যাশবোর্ড</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>প্রোফাইল</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>রক্তদান ইতিহাস</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                        <span>নোটিফিকেশন</span>
+                        <span class="notification-badge">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>নিকটস্থ রক্তদান কেন্দ্র</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>সেটিংস</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>লগ আউট</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </div>
-    <head>
-  ...
-  <link rel="stylesheet" href="style.css">
-  <!-- অথবা অন্যান্য CSS লিঙ্ক -->
-    </head>
-</header>
 
-<section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h2>"এক বিন্দু রক্ত, একটি জীবন"</h2>
-        <p>রক্তদান করুন, জীবন বাঁচান</p>
-        <div class="hero-buttons">
-            <a href="donate.html" class="btn">রক্ত দিন</a>
-            <a href="need-blood.html" class="btn">রক্ত প্রয়োজন</a>
-        </div>
-    </div>
-</section>
-
-<section class="dashboard">
-    <div class="stats-container">
-        <div class="stat-card">
-            <h3>মোট রক্তদাতা</h3>
-            <p id="total-donors">1,250</p>
-        </div>
-        <div class="stat-card">
-            <h3>মোট রক্তদান</h3>
-            <p id="total-donations">3,456</p>
-        </div>
-        <div class="stat-card">
-            <h3>আক্রান্ত এলাকা</h3>
-            <p id="total-areas">17</p>
-        </div>
-        <div class="stat-card">
-            <h3>জরুরী অনুরোধ</h3>
-            <p id="urgent-requests">24</p>
-        </div>
-    </div>
-</section>
-
-<section class="donate-form">
-    <h2>রক্তদাতা রেজিস্ট্রেশন</h2>
-    <form id="donorRegistration">
-        <div class="form-group">
-            <input type="text" id="donorName" placeholder="পূর্ণ নাম" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" id="donorPhone" placeholder="মোবাইল নম্বর" required>
-        </div>
-        <div class="form-group">
-            <input type="email" id="donorEmail" placeholder="ইমেইল ঠিকানা">
-        </div>
-        <div class="form-group">
-            <select id="bloodGroup" required>
-                <option value="">রক্তের গ্রুপ নির্বাচন করুন</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <!-- অন্যান্য ব্লাড গ্রুপ -->
-            </select>
-        </div>
-        <div class="form-group">
-            <select id="district" required>
-                <option value="">জেলা নির্বাচন করুন</option>
-                <option value="dhaka">ঢাকা</option>
-                <!-- অন্যান্য জেলা -->
-            </select>
-        </div>
-        <div class="form-group">
-            <select id="thana" required>
-                <option value="">থানা নির্বাচন করুন</option>
-                <!-- থানা অপশনগুলো জাভাস্ক্রিপ্ট দিয়ে লোড হবে -->
-            </select>
-        </div>
-        <div class="form-group">
-            <select id="union" required>
-                <option value="">ইউনিয়ন নির্বাচন করুন</option>
-                <!-- ১৭টি ইউনিয়নের অপশন -->
-            </select>
-        </div>
-        <button type="submit" class="submit-btn">রেজিস্টার করুন</button>
-    </form>
-</section>
-<section class="need-blood-form">
-    <h2>আমার রক্ত প্রয়োজন</h2>
-    <form id="bloodRequestForm">
-        <div class="form-group">
-            <input type="text" id="patientName" placeholder="রোগীর নাম" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" id="contactNumber" placeholder="যোগাযোগ নম্বর" required>
-        </div>
-        <div class="form-group">
-            <textarea id="fullAddress" placeholder="সম্পূর্ণ ঠিকানা" required></textarea>
-        </div>
-        <div class="form-group">
-            <select id="requiredBloodGroup" required>
-                <option value="">প্রয়োজনীয় রক্তের গ্রুপ</option>
-                <!-- ব্লাড গ্রুপ অপশন -->
-            </select>
-        </div>
-        <div class="form-group">
-            <input type="text" id="hospitalName" placeholder="হাসপাতালের নাম" required>
-        </div>
-        <div class="form-group">
-            <label for="requiredDate">রক্ত প্রয়োজন তারিখ</label>
-            <input type="date" id="requiredDate" required>
-        </div>
-        <div class="form-group">
-            <textarea id="additionalInfo" placeholder="অতিরিক্ত তথ্য (যদি থাকে)"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">অনুরোধ পাঠান</button>
-    </form>
-</section>
-
-<section class="donor-search">
-    <h2>রক্তদাতা খুঁজুন</h2>
-    <div class="search-filters">
-        <select id="searchBloodGroup">
-            <option value="">সকল রক্তের গ্রুপ</option>
-            <!-- ব্লাড গ্রুপ অপশন -->
-        </select>
-        <select id="searchDistrict">
-            <option value="">সকল জেলা</option>
-            <!-- জেলা অপশন -->
-        </select>
-        <button id="searchBtn">খুঁজুন</button>
-    </div>
-    
-    <div class="donor-list">
-        <!-- ডাইনামিকভাবে ডোনার লিস্ট লোড হবে -->
-        <div class="donor-card">
-            <h3>আহমেদ রহমান</h3>
-            <p><strong>রক্তের গ্রুপ:</strong> A+</p>
-            <p><strong>জেলা:</strong> ঢাকা</p>
-            <p><strong>যোগাযোগ:</strong> 01XXXXXXXX</p>
-            <p><strong>সর্বশেষ দান:</strong> ৩ মাস আগে</p>
-        </div>
-        <!-- আরো ডোনার কার্ড -->
-    </div>
-</section>
-
-<section class="donation-info">
-    <h2>রক্তদাতাদের জন্য সুবিধা</h2>
-    <div class="info-content">
-        <div class="info-card">
-            <h3>যাতায়াত ভাড়া</h3>
-            <p>রক্তদাতাদের জন্য আমরা যাতায়াত ভাড়া প্রদান করি। রক্তদানের পর আপনার রিসিপ্ট এবং ট্রাভেল বিল জমা দিন।</p>
-        </div>
-        <div class="info-card">
-            <h3>খাদ্য সরবরাহ</h3>
-            <p>প্রতিটি রক্তদানের পর আমরা পুষ্টিকর খাবার এবং পানীয় সরবরাহ করি।</p>
-        </div>
-        <div class="info-card">
-            <h3>চিকিৎসা পরীক্ষা</h3>
-            <p>রক্তদানের আগে বিনামূল্যে প্রাথমিক চিকিৎসা পরীক্ষা করা হয়।</p>
-        </div>
-    </div>
-</section>
-<section class="contact-section">
-    <h2>যোগাযোগ</h2>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>এডমিন ও মডারেটর</h3>
-            <p><strong>মোবাইল:</strong> <a href="tel:+8801XXXXXXXXX">+8801XXXXXXXXX</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/8801XXXXXXXXX">+8801XXXXXXXXX</a></p>
-            <p><strong>ইমেইল:</strong> admin@blooddonateclub.com</p>
-            
-            <h3>জরুরী যোগাযোগ</h3>
-            <p><strong>২৪/৭ হেল্পলাইন:</strong> 16XXX</p>
-        </div>
-        <div class="contact-form">
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="আপনার নাম" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="ইমেইল" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="মোবাইল নম্বর" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="আপনার বার্তা" required></textarea>
-                </div>
-                <button type="submit">বার্তা পাঠান</button>
-            </form>
-        </div>
-    </div>
-                      </section>
-
-<section class="donation-statement">
-    <h2>সাম্প্রতিক রক্তদান</h2>
-    <div class="statement-table">
-        <table>
-            <thead>
-                <tr>
-                    <th>তারিখ</th>
-                    <th>রক্তদাতা</th>
-                    <th>রক্তের গ্রুপ</th>
-                    <th>হাসপাতাল</th>
-                    <th>স্ট্যাটাস</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>১০-০৮-২০২৩</td>
-                    <td>রহিম মিয়া</td>
-                    <td>B+</td>
-                    <td>ঢাকা মেডিকেল কলেজ</td>
-                    <td>সম্পন্ন</td>
-                </tr>
-                <!-- আরো ডাটা -->
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-about">
-            <h3>Blood Donate Club</h3>
-            <p>আমরা একটি স্বেচ্ছাসেবী সংগঠন যারা রক্তদানের মাধ্যমে মানুষের জীবন বাঁচাতে কাজ করি।</p>
-        </div>
-        <div class="footer-links">
-            <h3>লিংক</h3>
-            <ul>
-                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
-                <li><a href="privacy.html">গোপনীয়তা নীতি</a></li>
-                <li><a href="terms.html">শর্তাবলী</a></li>
-                <li><a href="faq.html">সচরাচর প্রশ্ন</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>যোগাযোগ</h3>
-            <p>ইমেইল: info@blooddonateclub.com</p>
-            <p>ফোন: +8801XXXXXXXXX</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- মূল কন্টেন্ট এরিয়া -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h2>স্বাগতম, আহমেদ রহমান!</h2>
+                <p>আপনার শেষ রক্তদান: ৩ মাস আগে | পরবর্তী রক্তদানের উপযুক্ত: হ্যাঁ</p>
             </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2023 Blood Donate Club. সকল অধিকার সংরক্ষিত।</p>
-    </div>
-</footer>
 
+            <!-- ড্যাশবোর্ড কার্ড -->
+            <div class="dashboard-cards">
+                <div class="card blood-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>A+</h3>
+                        <p>আপনার রক্তের গ্রুপ</p>
+                    </div>
+                </div>
+
+                <div class="card donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>১২ বার</h3>
+                        <p>মোট রক্তদান</p>
+                    </div>
+                </div>
+
+                <div class="card request-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>৫ টি</h3>
+                        <p>সক্রিয় অনুরোধ</p>
+                    </div>
+                </div>
+
+                <div class="card reward-card">
+                    <div class="card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>গোল্ড</h3>
+                        <p>আপনার ব্যড্জ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- সাম্প্রতিক রক্তদান অনুরোধ -->
+            <section class="requests-section">
+                <div class="section-header">
+                    <h3>সাম্প্রতিক রক্তের অনুরোধ</h3>
+                    <a href="#" class="view-all">সব দেখুন</a>
+                </div>
+
+                <div class="requests-list">
+                    <div class="request-item urgent">
+                        <div class="request-info">
+                            <h4>জরুরী: A+ রক্ত প্রয়োজন</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> ঢাকা মেডিকেল কলেজ হাসপাতাল</p>
+                            <p><i class="fas fa-clock"></i> আজ, ৩:০০ PM এর মধ্যে</p>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn accept-btn">সহযোগিতা করুন</button>
+                            <button class="btn details-btn">বিস্তারিত</button>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-info">
+                            <h4>B+ রক্ত প্রয়োজন</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> এপোলো হাসপাতাল, ঢাকা</p>
+                            <p><i class="fas fa-clock"></i> আগামীকাল, ১১:০০ AM</p>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn accept-btn">সহযোগিতা করুন</button>
+                            <button class="btn details-btn">বিস্তারিত</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- রক্তদান ইতিহাস -->
+            <section class="history-section">
+                <div class="section-header">
+                    <h3>আপনার রক্তদান ইতিহাস</h3>
+                    <a href="#" class="view-all">সম্পূর্ণ ইতিহাস</a>
+                </div>
+
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>তারিখ</th>
+                                <th>হাসপাতাল/কেন্দ্র</th>
+                                <th>রক্তের গ্রুপ</th>
+                                <th>স্ট্যাটাস</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>১০/০৮/২০২৩</td>
+                                <td>ঢাকা মেডিকেল কলেজ</td>
+                                <td>A+</td>
+                                <td><span class="status completed">সম্পন্ন</span></td>
+                            </tr>
+                            <tr>
+                                <td>১৫/০৬/২০২৩</td>
+                                <td>বাংলাদেশ রেড ক্রিসেন্ট</td>
+                                <td>A+</td>
+                                <td><span class="status completed">সম্পন্ন</span></td>
+                            </tr>
+                            <tr>
+                                <td>২০/০৪/২০২৩</td>
+                                <td>স্যার সলিমুল্লাহ মেডিকেল কলেজ</td>
+                                <td>A+</td>
+                                <td><span class="status completed">সম্পন্ন</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
